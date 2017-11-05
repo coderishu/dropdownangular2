@@ -1,0 +1,42 @@
+<div class="container">  
+    <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".pdf,.doc,.docx">                                                                          
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ticketNum</th>
+          <th>applicationName</th>
+          <th>transDate</th>
+          <th>refTicketNum</th>
+          <th>assetCategoryList</th>
+          <th>infratelSiteId</th>
+          <th>activityId</th>
+          <th>checkLists</th>
+          <th>pavAssetType</th>
+          <th>siteId</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let obj of arrayObject2">
+          <td>{{obj.ticketNum}}</td>
+          <td>{{obj.applicationName}}</td>
+          <td>{{obj.transDate}}</td>
+          <td>{{obj.refTicketNum}}</td>
+          <!-- <td>{{obj.assetCategoryList}}</td> -->
+          <select [ngModel]="selectedCity" (ngModelChange)="onChange($event)">
+            <option *ngFor="let asset of arrayObject5">
+               {{ asset }}
+            </option>
+          </select>
+          <td>{{obj.infratelSiteId}}</td>
+          <td>{{obj.activityId}}</td>
+          <td>{{obj.checkLists}}</td>
+          <td>{{obj.pavAssetType}}</td>
+          <td>{{obj.siteId}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <div style="margin-top: 20px" *ngIf="f">
+       <pre>submitted value: <br>{{f.value | json}}</pre>
+    </div> -->
+  </div>

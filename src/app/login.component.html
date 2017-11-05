@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Enter User-ID</h1>
+    <form #f="ngForm" novalidate>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="userid" [(ngModel)]="user.id">
+      </div>
+                                                                                                                               
+    <button type="submit" (click)="save()" class="btn btn-default">Submit</button>
+    </form>   
+    </div>

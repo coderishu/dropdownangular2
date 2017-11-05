@@ -1,0 +1,9 @@
+{
+    "name":"ishu",
+    "age":30,
+    "cars": [
+        {"car":"Ford"},
+        {"car":"BMW"},
+        {"car":"Fiat"}
+    ]
+ }
